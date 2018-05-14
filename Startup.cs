@@ -26,7 +26,7 @@ namespace UserDashboard{
         public void ConfigureServices(IServiceCollection services){
             services.AddSession();
             services.AddMvc();
-            services.AddDbContext<Context>(options => options.UseNpgsql(Configuration["DBInfo:ConnectionString"]));
+            services.AddDbContext<Context>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory loggerFactory){

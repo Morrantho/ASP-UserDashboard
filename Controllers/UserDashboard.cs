@@ -43,7 +43,7 @@ namespace UserDashboard.Controllers{
                     ViewBag.error = "Invalid Credentials!";
                     return View("login");
                 }else{
-                    HttpContext.Session.SetString("id",user.Id+"");
+                    HttpContext.Session.SetString("id",user.id+"");
 
                     if(user.admin){
                         return RedirectToAction("adminDashboard");
@@ -67,7 +67,7 @@ namespace UserDashboard.Controllers{
         public IActionResult registerPost(RegisterVM registerVM){
             if(ModelState.IsValid){
                 User user = context.CreateUser(registerVM);
-                HttpContext.Session.SetString("id",user.Id+"");
+                HttpContext.Session.SetString("id",user.id+"");
                 return RedirectToAction("register");
             }
 
@@ -83,9 +83,9 @@ namespace UserDashboard.Controllers{
                 return RedirectToAction("login");
             }else{
                 int uid = Int32.Parse(id);
-                User user = context._users.Where(u => u.Id == uid).SingleOrDefault();
+                User user = context.users.Where(u => u.id == uid).SingleOrDefault();
                 ViewBag.user = user;
-                ViewBag.users = context._users.ToList();
+                ViewBag.users = context.users.ToList();
                 return View("dashboard");
             }
         }
@@ -99,11 +99,11 @@ namespace UserDashboard.Controllers{
                 return RedirectToAction("login");
             }else{
                 int uid = Int32.Parse(id);
-                User user = context._users.Where(u => u.Id == uid).SingleOrDefault();
+                User user = context.users.Where(u => u.id == uid).SingleOrDefault();
                 ViewBag.user = user;
 
                 if(user.admin){
-                    ViewBag.users = context._users.ToList();
+                    ViewBag.users = context.users.ToList();
                     return View("admin");
                 }else{
                     return RedirectToAction("dashboard");
@@ -117,8 +117,8 @@ namespace UserDashboard.Controllers{
             string uid = HttpContext.Session.GetString("id");
             if(uid == null){return RedirectToAction("login");}
 
-            ViewBag.user = context._users
-            .Where(u => u.Id == id )
+            ViewBag.user = context.users
+            .Where(u => u.id == id )
             .Include(u => u.posts)
             .SingleOrDefault();
 
@@ -128,16 +128,7 @@ namespace UserDashboard.Controllers{
         [HttpPost]
         [Route("/users/posts")]
         public IActionResult post(string text, int id){
-            // User postee = context._users.Where(u => u.Id == id).SingleOrDefault();
-            // int uid = Int32.Parse(HttpContext.Session.GetString("id"));
-            // User poster = context._users.Where(u => u.Id == uid).SingleOrDefault();
-            // Post post = new Post(text,poster);
 
-            // post.poster = poster;
-            // post.postee = postee;
-
-            // context.Add(post);
-            // context.SaveChanges();
 
             return Redirect("/users/"+id);
         }

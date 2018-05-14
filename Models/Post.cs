@@ -3,15 +3,12 @@ using System.Collections.Generic;
 
 namespace UserDashboard.Models{
 	public class Post:BaseEntity{
-		public string Text{set;get;}
-		public int UserId{set;get;}
-		public User User{set;get;}
+		public string text{set;get;}
+		public User user{set;get;}
+		public List<Comment> comments{set;get;}
 
 		public Post(){
-
-		}
-		
-		public Post(string text){
+			comments = new List<Comment>();
 		}
 	}
 }

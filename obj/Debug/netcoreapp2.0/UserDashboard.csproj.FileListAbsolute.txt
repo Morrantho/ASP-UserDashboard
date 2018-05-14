@@ -1,0 +1,10 @@
+/home/tony/Documents/Lectures/C#/week3/day1/ASP-UserDashboard/obj/Debug/netcoreapp2.0/UserDashboard.csproj.CoreCompileInputs.cache
+/home/tony/Documents/Lectures/C#/week3/day1/ASP-UserDashboard/obj/Debug/netcoreapp2.0/UserDashboard.AssemblyInfoInputs.cache
+/home/tony/Documents/Lectures/C#/week3/day1/ASP-UserDashboard/obj/Debug/netcoreapp2.0/UserDashboard.AssemblyInfo.cs
+/home/tony/Documents/Lectures/C#/week3/day1/ASP-UserDashboard/bin/Debug/netcoreapp2.0/UserDashboard.deps.json
+/home/tony/Documents/Lectures/C#/week3/day1/ASP-UserDashboard/bin/Debug/netcoreapp2.0/UserDashboard.runtimeconfig.json
+/home/tony/Documents/Lectures/C#/week3/day1/ASP-UserDashboard/bin/Debug/netcoreapp2.0/UserDashboard.runtimeconfig.dev.json
+/home/tony/Documents/Lectures/C#/week3/day1/ASP-UserDashboard/bin/Debug/netcoreapp2.0/UserDashboard.dll
+/home/tony/Documents/Lectures/C#/week3/day1/ASP-UserDashboard/bin/Debug/netcoreapp2.0/UserDashboard.pdb
+/home/tony/Documents/Lectures/C#/week3/day1/ASP-UserDashboard/obj/Debug/netcoreapp2.0/UserDashboard.dll
+/home/tony/Documents/Lectures/C#/week3/day1/ASP-UserDashboard/obj/Debug/netcoreapp2.0/UserDashboard.pdb

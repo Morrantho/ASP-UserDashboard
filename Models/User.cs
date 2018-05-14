@@ -8,9 +8,12 @@ namespace UserDashboard.Models{
 		public string last{set;get;}
 		public string password{set;get;}
 		public bool admin{set;get;}
+		public List<Post> posts{set;get;}
+		public List<Comment> comments{set;get;}
 
 		public User(){
-
+			posts = new List<Post>();
+			comments = new List<Comment>();
 		}
 
 		public User(RegisterVM registerVM){
@@ -33,7 +36,8 @@ namespace UserDashboard.Models{
 	PostGres Migrations:
 
 	dotnet ef migrations add FirstMigration - Creates a migration. Requires at least one model in advance.
-		- Applies migrations much like Django's "migrate" command.
+
+	dotnet ef database update - Applies migrations much like Django's "migrate" command.
 */
 	}
 }

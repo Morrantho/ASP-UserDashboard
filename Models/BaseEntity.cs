@@ -5,8 +5,8 @@ using System;
 namespace UserDashboard.Models{
 	public abstract class BaseEntity{
 		[Key]
-		public int Id{get;set;}
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+		public int id{get;set;}
+        public DateTime createdAt{get;set;}
+        public DateTime updatedAt{get;set;}
 	}
 }

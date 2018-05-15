@@ -1,0 +1,24 @@
+<h2>@ViewBag.user.first @ViewBag.user.last</h2>
+<h3>Registered At: @ViewBag.user.CreatedAt</h3>
+<h3>User Id: @ViewBag.user.Id</h3>
+<h3>Email: @ViewBag.user.email</h3>
+
+<hr>
+
+<p>Leave A message for @ViewBag.user.first @ViewBag.user.last</p>
+
+<form action="/users/posts" method="POST" >
+	<textarea name="text"></textarea>
+	<input type="hidden" name="id" value="@ViewBag.user.Id" >
+	<input type="submit" value="Post">
+</form>
+
+@{
+	<h1>@ViewBag.user.posts</h1>
+
+	foreach(var post in @ViewBag.user.posts){
+		<h1>@post.posterId</h1>
+		<p>@post.poster.first</p>
+		<p>@post.text</p>
+	}
+}

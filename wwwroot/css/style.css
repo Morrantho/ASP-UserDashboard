@@ -1,0 +1,15 @@
+.header{
+	background-color: grey;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	height: 8vh;
+}
+
+.main{
+	background-color: lightgrey;
+}
+
+.submain{
+	display: flex;
+}

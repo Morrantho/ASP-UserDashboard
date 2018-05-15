@@ -1,0 +1,26 @@
+<h1>YOURE ON THE ADMIN PAGE!</h1>
+
+<table border="1">
+	<tr>
+		<th>Id:</th>
+		<th>Name:</th>
+		<th>Email:</th>
+		<th>Created At:</th>
+		<th>User Level:</th>
+		<th>Actions:</th>
+	</tr>
+
+	@{
+		foreach(var user in @ViewBag.users){
+			<tr>
+				<td>@user.Id</td>
+				<td><a href="/users/@user.Id">@user.first @user.last</a></td>
+				<td>@user.email</td>
+				<td>@user.CreatedAt</td>
+				<td>@user.admin</td>
+				<td><a href="/users/edit/@user.Id" >Edit</a>	<a href="/users/delete/@user.Id ">Remove</a></td>
+			</tr>
+		}
+	}
+</table>
+

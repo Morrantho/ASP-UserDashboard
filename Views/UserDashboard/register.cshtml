@@ -1,0 +1,24 @@
+@model UserDashboard.Models.RegisterVM
+
+<h1>Register</h1>
+
+<form asp-controller="UserDashboard" asp-action="registerPost" >
+	<p>Email:<input asp-for="email" ></p>
+	<span asp-validation-for="email"></span>
+
+	<p>First Name:<input asp-for="first" ></p>
+	<span asp-validation-for="first"></span>
+
+	<p>Last Name:<input asp-for="last" ></p>
+	<span asp-validation-for="last"></span>
+
+	<p>Password:<input asp-for="password" ></p>
+	<span asp-validation-for="password"></span>
+
+	<p>Password Confirmation:<input asp-for="confirm" ></p>
+	<span asp-validation-for="confirm"></span>
+
+	<input type="submit" value="Register">
+</form>
+
+<a href="/login">Already have an account? Login</a>
